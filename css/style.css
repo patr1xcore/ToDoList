@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    font-family: inherit;
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%; /* 10px -> 1rem */;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at 16% 83%, rgba(148, 148, 148,0.06) 0%, rgba(148, 148, 148,0.06) 50%,rgba(63, 63, 63,0.06) 50%, rgba(63, 63, 63,0.06) 100%),radial-gradient(circle at 68% 87%, rgba(66, 66, 66,0.06) 0%, rgba(66, 66, 66,0.06) 50%,rgba(105, 105, 105,0.06) 50%, rgba(105, 105, 105,0.06) 100%),radial-gradient(circle at 38% 50%, rgba(123, 123, 123,0.06) 0%, rgba(123, 123, 123,0.06) 50%,rgba(172, 172, 172,0.06) 50%, rgba(172, 172, 172,0.06) 100%),linear-gradient(90deg, hsl(18,0%,1%),hsl(18,0%,1%));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.completed {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: line-through;
+}
+
+.toDoList__container {
+    width: 360px;
+    background: #ecf0f1;
+    margin: 5rem auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.heading__primary {
+    font-size: 4.2rem;
+    color: #f1c40f;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.heading__primary #fullName {
+    display: block;
+    font-size: 2.1rem;
+    color: #ecf0f1;
+    margin-top: 1rem;
+}
+
+.heading__primary #nickname {
+    font-style: italic;
+}
+
+.heading__toDoList {
+    display: flex;
+    height: 5rem;
+    line-height: 5rem;
+    background: #f1c40f;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+#toggleInput {
+    cursor: pointer;
+    width: 4rem;
+    height: 100%;
+    font-size: 2.8rem;
+    text-align: center;
+    background: white;
+    transition: all 0.25s;
+}
+
+input {
+    display: none;
+    width: 100%;
+    font-size: 2rem;
+    border: 0;
+    padding: 1rem;
+}
+
+li {
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.6rem;
+}
+
+li .remove {
+    cursor: pointer;
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    background: #e74c3c;
+    color: #ecf0f1;
+    text-align: center;
+    transition: all 0.25s;
+    visibility: hidden;
+    margin-right: 1rem;
+}
+
+li:hover .remove {
+    width: 2.5rem;
+    visibility: visible;
+}
+
+
+li:nth-child(2n) {
+    background: #bdc3c7;
+}
